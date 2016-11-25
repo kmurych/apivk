@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Документ без названия</title>
+</head>
+
+<body>
+<script src="https://vk.com/js/api/openapi.js?136" type="text/javascript"></script>
+<script type="text/javascript">
+	VK.init({
+    	apID:5746040
+    });
+</script>
+<script type="text/javascript"</script>
+$("#get_photo").click(function () {
+	VK.api("users.get",{ users_ids: [vk_user_id], fields: "photo_500"}, function (data) {
+		console.log(data);
+		$("#vk_avatar").attr("src", data.response[0].photo_200);
+	});
+});
+</script>
+<img src= "" id ="avatar" />
+<button id ="photo"> rrr</button>
+		
+</body>
+</html>
